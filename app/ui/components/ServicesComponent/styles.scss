@@ -1,0 +1,221 @@
+@import '../../../../styles/globals.scss';
+
+.services {
+  padding: 96px;
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (max-width: $xl-small) {
+    padding-left: 90px;
+  }
+
+  @media screen and (max-width: $sm-large) {
+    padding: 58px 15px;
+    @include flex-column-gap(20px);
+  }
+
+  &-header {
+    @include flex-space-between;
+    padding: 0 164px 47px 95px;
+
+    @media screen and (max-width: $lg-medium) {
+      padding: 50px;
+      padding-top: 0;
+    }
+
+    @media screen and (max-width: $sm-large) {
+      padding: 0;
+    }
+  }
+
+  &-slider {
+    max-width: 900px;
+    align-self: center;
+
+    @media screen and (max-width: $lg-medium) {
+      max-width: 650px;
+    }
+
+    @media screen and (max-width: $sm-large) {
+      max-width: 350px;
+    }
+  }
+
+  &-title {
+    @include flex-column-gap(4px);
+    @include font-size(32px, 144%, 600);
+    text-align: start;
+
+    @media screen and (max-width: $sm-large) {
+      font-size: 24px;
+      gap: 12px;
+    }
+  }
+
+  &-subtitle {
+    @include font-size(16px, 144%);
+    color: #828282;
+  }
+
+  &__slider-buttons {
+    display: flex;
+    align-self: center;
+    gap: 12px;
+
+    @media screen and (max-width: $lg-small) {
+      display: none;
+    }
+  }
+
+  &-button {
+    padding: 0;
+    background: inherit;
+    border: none;
+    cursor: pointer;
+  }
+
+  &-slide {
+    overflow: hidden;
+    max-width: 821px;
+    display: flex;
+    border-radius: 12px;
+    border: 1px solid #E8E8E8;
+
+    @media screen and (max-width: $lg-medium) {
+      max-width: 621px;
+    }
+
+    @media screen and (max-width: $sm-large) {
+      min-width: 320px;
+      flex-direction: column;
+    }
+
+    &__wrapper {
+      padding: 0 30px;
+    }
+
+    &__info {
+      @include flex-column-gap(12px);
+      padding: 42px 30px 0 41px;
+
+      @media screen and (max-width: $lg-medium) {
+        padding: 20px;
+      }
+
+      @media screen and (max-width: $sm-large) {
+        padding: 15px;
+      }
+    }
+
+    &-picture {
+      width: 307px;
+      height: 420px;
+
+      @media screen and (max-width: $lg-medium) {
+        width: 244px;
+        height: 320px;
+      }
+
+      @media screen and (max-width: $sm-large) {
+        width: 328px;
+        height: 220px;
+        object-fit: cover;
+      }
+    }
+
+    &__title {
+      @include font-size(28px, 144%, 600);
+
+      @media screen and (max-width: $lg-medium) {
+        font-size: 20px;
+      }
+
+      @media screen and (max-width: $sm-large) {
+        font-size: 24px;
+      }
+    }
+
+    &__descriptions {
+      @include flex-column-gap(24px);
+      color: #828282;
+
+      @media screen and (max-width: $lg-medium) {
+        gap: 10px;
+      }
+    }
+
+    &__description {
+      @include font-size(16px, 164%);
+
+      @media screen and (max-width: $lg-medium) {
+        font-size: 12px;
+      }
+
+      @media screen and (max-width: $sm-large) {
+        font-size: 14px;
+      }
+    }
+
+    &__guarantees {
+      @include flex-column-gap(14px);
+    }
+    &__guarantee {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 24px;
+      @include font-size(14px, 24px);
+
+      @media screen and (max-width: $lg-medium) {
+        font-size: 11px;
+      }
+
+      @media screen and (max-width: $sm-large) {
+        font-size: 12px;
+      }
+    }
+  }
+
+  .slick {
+    &-slider {
+      max-width: 1200px;
+    }
+
+    &-list {
+      padding: 0 !important;
+    }
+
+    &-dots {
+      position: static;
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+
+      @media screen and (max-width: $sm-large) {
+        margin-top: 18px;
+      }
+
+      & li button::before {
+        position: static;
+        font-size: 8px;
+        text-align: center;
+        opacity: 1;
+        color: #3074DA;
+      }
+      & .slick-active button::before {
+        border: 3px solid #3074DA;
+        border-radius: 8px;
+        opacity: 1;
+        color: inherit;
+      }
+    }
+
+    @media screen and (max-width: $sm-large) {
+      &-track {
+        display: flex;
+      }
+    }
+  }
+}

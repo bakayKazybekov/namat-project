@@ -1,0 +1,134 @@
+@import '../../../../styles/globals.scss';
+
+.about-us {
+  @include flex-space-between;
+  padding: 214px 235px 280px 260px;
+  color: #10152C;
+  position: relative;
+
+  @media screen and (max-width: $xl-medium) {
+    padding: 150px;
+  }
+
+  @media screen and (max-width: $xl-small) {
+    padding: 80px;
+    padding-top: 150px;
+  }
+
+  @media screen and (max-width: $lg-medium) {
+    padding: 50px;
+    padding-top: 150px;
+  }
+
+  @media screen and (max-width: $sm-large) {
+    padding: 236px 15px 55px;
+    @include flex-column-gap(120px);
+  }
+
+  .general-info {
+    max-width: 350px;
+    @include flex-column-gap(50px);
+
+    @media screen and (max-width: $sm-large) {
+      gap: 24px;
+      align-items: flex-end;
+    }
+
+    &__content {
+      @include flex-column-gap(12px);
+    }
+
+    &__title {
+      @include font-size(32px, 144%, 600);
+
+      @media screen and (max-width: $xl-small) {
+        font-size: 28px;
+      }
+
+      @media screen and (max-width: $sm-large) {
+        font-size: 24px;
+      }
+    }
+
+    &__text {
+      @include font-size(24px, 144%);
+
+      @media screen and (max-width: $xl-small) {
+        font-size: 20px;
+      }
+
+      @media screen and (max-width: $sm-large) {
+        font-size: 16px;
+      }
+    }
+  }
+
+  .detailed-info {
+    @include flex-column-gap(32px);
+
+    @media screen and (max-width: $sm-large) {
+      gap: 16px;
+    }
+    &__item {
+      max-width: 510px;
+      display: flex;
+      gap: 32px;
+
+      @media screen and (max-width: $sm-large) {
+        @include flex-column-gap(2px);
+      }
+
+      &-text {
+        @include font-size(16px, 164%);
+        color: #707281;
+
+        @media screen and (max-width: $xl-small) {
+          font-size: 14px;
+        }
+
+        @media screen and (max-width: $sm-large) {
+          font-size: 14px;
+        }
+      }
+
+      &-number {
+        @include font-size(32px, 164%, 600);
+        color: #DEDEDE;
+      }
+    }
+  }
+
+  .special-circle {
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    left: -4%;
+    top: 8%;
+
+    @media screen and (max-width: $sm-large) {
+      width: 280px;
+      height: 300px;
+      left: -18%;
+      top: 10%;
+    }
+  }
+  .about-us__blue-line {
+    width: 134px;
+    height: 16px;
+  }
+  &-icon {
+    // width: 1050px;
+    // height: 288px;
+    width: calc(282px + 809 * ((100vw - 320px) / (1440)));
+    height: calc(80px + 229 * ((100vw - 320px) / (1440)));
+    position: absolute;
+    left: 0%;
+    bottom: 0;
+
+    @media screen and (max-width: $sm-large) {
+      left: 50%;
+      top: 42%;
+      transform: translate(-50%, -10%);
+    }
+  }
+}

@@ -1,0 +1,144 @@
+@import "../../../../styles/globals.scss";
+
+.contacts {
+  background-image: url('../../../../public/contacts-bg.png');
+  background-position: bottom;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  padding: 82px 0;
+
+  @media screen and (max-width: $sm-large) {
+    padding: 0 16px 158px;
+  }
+
+  &-wrapper {
+    @include flex-column-gap(46px);
+    background-color: #fff;
+    border: 1px solid #DEDEDE;
+    border-radius: 12px;
+    padding: 42px;
+    transform: translateX(-26%);
+    position: relative;
+    overflow: hidden;
+
+    @media screen and (max-width: $xl-medium) {
+      transform: translateX(-15%);
+    }
+
+    @media screen and (max-width: $xl-small) {
+      transform: translateX(0);
+    }
+    
+    @media screen and (max-width: $sm-large) {
+      width: 328px;
+      transform: translateX(0);
+      gap: 24px;
+      padding: 16px;
+    }
+  }
+
+  &-title {
+    @include font-size(32px, 144%, 600);
+
+    @media screen and (max-width: $sm-large) {
+      font-size: 24px;
+    }
+  }
+
+  &-content {
+    display: flex;
+    gap: 78px;
+
+    @media screen and (max-width: $sm-large) {
+      flex-direction: column;
+      gap: 30px;
+    }
+  }
+
+  &-info {
+    @include flex-column-gap(55px);
+    
+    @media screen and (max-width: $sm-large) {
+      gap: 24px;
+    }
+  }
+
+  &-communications {
+    @include flex-column-gap(25px);
+  }
+
+  &-communication {
+    @include flex-gap(16px);
+
+    @media screen and (max-width: $sm-large) {
+      gap: 22px;
+    }
+
+    &__text {
+      @include font-size(16px, 160%, 500);
+    }
+  }
+
+  &-text {
+    max-width: 240px;
+    @include font-size(14px, 172%, 500);
+  }
+
+  &-form {
+    min-width: 328px;
+    @include flex-column-gap(42px);
+
+    @media screen and (max-width: $sm-large) {
+      min-width: 100%;
+      gap: 32px;
+    }
+  }
+
+  &-fields {
+    @include flex-column-gap(17px);
+  }
+
+  &-input {
+    border: none;
+    border-bottom: 1px solid #d9d9d9;
+    border-radius: 8px;
+    max-width: 324px;
+    background: inherit;
+    padding: 0 0 24px 0;
+    outline: none;
+    @include font-size(16px, 30px);
+
+    &:last-child {
+      padding-bottom: 56px;
+    }
+  }
+
+  &-button {
+    border: none;
+    background-color: #3074DA;
+    color: #FFF;
+    border-radius: 8px;
+    @include font-size(18px, 30px, 600);
+    padding: 16px 32px;
+    cursor: pointer;
+  }
+
+  &__right-waves {
+    position: absolute;
+    top: 0;
+    right: -11%;
+  }
+  &__left-waves {
+    position: absolute;
+    bottom: -7%;
+    left: -33%;
+  }
+
+  @media screen and (max-width: $sm-large) {
+    &__right-waves,
+    &__left-waves {
+      display: none;
+    }
+  }
+}

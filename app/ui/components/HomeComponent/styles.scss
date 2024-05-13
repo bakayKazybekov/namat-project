@@ -1,0 +1,231 @@
+@import '../../../../styles/globals.scss';
+
+.home {
+  background-image: 
+    url('../../../../public/home-bg.png'), 
+    url('../../../../public/business-team-manager-meeting.jpg');
+  position: relative;
+  color: #FFF;
+
+  &-container {
+    max-width: 77%;
+    margin: 0 auto;
+    padding: 32px 0 174px 0;
+    @include flex-column-gap(96px);
+
+    @media screen and (max-width: $sm-large) {
+      max-width: 100%;
+      padding: 20px 18px 270px;
+      gap: 38px;
+    }
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__content {
+    display: flex;
+
+    &-wrapper {
+      @include flex-column-gap(42px);
+
+      @media screen and (max-width: $sm-large) {
+        gap: 31px;
+      }
+    }
+
+    &-text {
+      max-width: 480px;
+      @include flex-column-gap(16px);
+      @include font-size(18px, 32px);
+
+      @media screen and (max-width: $xl-small) {
+        font-size: 16px;
+      }
+
+      @media screen and (max-width: $sm-large) {
+        @include font-size(16px, 28px);
+        gap: 8px;
+      }
+
+      span {
+        @include font-size(48px, 132%, 500);
+
+        @media screen and (max-width: $xl-small) {
+          font-size: 42px;
+        }
+
+        @media screen and (max-width: $sm-large) {
+          max-width: 280px;
+          font-size: 28px;
+        }
+      }
+    }
+
+    &-button {
+      @include flex-centered();
+      align-self: flex-start;
+      gap: 16px;
+
+      color: #FFF;
+      @include font-size(18px, 30px, 600);
+      
+      background: inherit;
+      padding: 16px 27px;
+      border: 1px solid #FFF;
+      border-radius: 8px;
+      cursor: pointer;
+
+      @media screen and (max-width: $sm-large) {
+        padding: 14px 24px;
+        font-size: 16px;
+      }
+    }
+  }
+
+  &-picture {
+    width: 798px;
+    height: 541px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    @media screen and (max-width: $xl-medium) {
+      width: 516px;
+      height: 350px;
+    }
+
+    @media screen and (max-width: $xl-small) {
+      width: 412px;
+      height: 280px;
+    }
+
+    @media screen and (max-width: $sm-large) {
+      width: 383px;
+      height: 237px;
+    }
+  }
+  &-circle {
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    left: 4%;
+    top: 20%;
+
+    @media screen and (max-width: $sm-large) {
+      display: none;
+    }
+  }
+  &-dots {
+    width: 148px;
+    height: 132px;
+    position: absolute;
+    right: 2%;
+    top: 17%;
+
+    @media screen and (max-width: $xl-medium) {
+      top: 38%;
+    }
+    
+    @media screen and (max-width: $xl-small) {
+      width: 130px;
+      top: 45%;
+    }
+
+    @media screen and (max-width: $sm-large) {
+      display: none;
+    }
+  }
+  &-dots-mobile {
+    position: absolute;
+    right: 8%;
+    bottom: 33%;
+    display: none;
+
+    @media screen and (max-width: $sm-large) {
+      display: block;
+    }
+  }
+  .green-triangle {
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    right: 45%;
+    top: 30%;
+
+    @media screen and (max-width: $xl-medium) {
+      right: 35%;
+      top: 48%;
+    }
+
+    @media screen and (max-width: $xl-small) {
+      width: 28px;
+      top: 55%;
+    }
+
+    @media screen and (max-width: $sm-large) {
+      width: 28px;
+      height: 28px;
+      right: auto;
+      top: auto;
+      bottom: 31%;
+      left: 7%;
+    }
+  }
+
+  .burger-menu {
+    &-container {
+      display: none;
+  
+      @media screen and (max-width: $sm-large) {
+        display: block;
+      }
+    }
+
+    &__navigation {
+      &,
+      .navigation-list {
+        @include flex-column-gap(28px);
+        align-items: center;
+        &__item {
+          padding: 0;
+        }
+      }
+    }
+
+    .navigation-list__item a,
+    .navigation__get-started {
+      font-size: 20px;
+    }
+  }
+
+  .bm-burger-button {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    right: 10%;
+  }
+  
+  .bm-menu {
+    background: #10152C;
+    padding: 9.8em 1.5em 0;
+    font-size: 1.15em;
+
+    &-wrap {
+      top: 0;
+    }
+  }
+  
+  .bm-item-list {
+    padding: 0.8em;
+  }
+
+  .bm-cross-button {
+    width: 16px !important;
+    height: 16px !important;
+    right: 11% !important;
+    top: 4% !important;
+  }
+}

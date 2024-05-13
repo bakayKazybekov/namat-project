@@ -1,0 +1,13 @@
+$sm-large: 430px;
+$lg-small: 768px;
+$lg-medium: 992px;
+$xl-small: 1024px;
+$xl-medium: 1200px;
+
+:export {
+  smLarge: $sm-large;
+  lgSmall: $lg-small;
+  lgMedium: $lg-medium;
+  xlSmall: $xl-small;
+  xlMedium: $xl-medium;  
+}

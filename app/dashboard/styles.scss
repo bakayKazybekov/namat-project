@@ -1,0 +1,92 @@
+@import "../../styles/globals.scss";
+
+.footer {
+  padding: 52px 165px 43px;
+  background-color:#10152C;
+
+  @media screen and (max-width: $sm-large) {
+    padding: 24px;
+  }
+
+  &-content {
+    @include flex-column-gap(28px);
+    align-items: center;
+    padding-bottom: 48px;
+
+    @media screen and (max-width: $sm-large) {
+      align-items: flex-start;
+      gap: 22px;
+      padding-bottom: 18px;
+    }
+  }
+
+  &-ending {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 25px;
+    border-top: 1px solid #707281;
+
+    @media screen and (max-width: $sm-large) {
+      flex-direction: column-reverse;
+      gap: 24px;
+    }
+  }
+
+  &-text {
+    color: #FFF;
+    @include font-size(14px, 24px);
+
+    @media screen and (max-width: $sm-large) {
+      max-width: 210px;
+    }
+  }
+
+  &-links {
+    color: #FFF;
+  }
+
+  .footer-navigation {
+    &,
+    .navigation-list {
+      display: flex;
+    }
+  }
+  
+  @media screen and (max-width: $sm-large) {
+    .footer-navigation {
+      &,
+      .navigation-list {
+        display: flex;
+        flex-direction: column;
+        gap: 17px;
+      }
+    }
+  }
+
+  .logo-banner {
+    .namat-logo {
+      width: 42px;
+      height: 42px;
+    }
+  
+    &-text {
+      font-size: 24px;
+      line-height: 22px;
+  
+      span {
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $sm-large) {
+  // .about-us,
+  // .partners,
+  // .services,
+  // .contacts,
+  // .footer,
+  .brief-wrapper {
+    display: none;
+  }
+}

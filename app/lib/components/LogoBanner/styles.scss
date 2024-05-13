@@ -1,0 +1,40 @@
+@import "../../../../styles/globals.scss";
+
+.logo-banner {
+  display: flex;
+  gap: 12px;
+
+  .namat-logo {
+    width: 42px;
+    height: 42px;
+
+    @media screen and (max-width: $sm-large) {
+      width: 32px;
+      height: 32px;
+    }
+  }
+
+  &-text {
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+    color: #FFF;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 22px;
+
+    @media screen and (max-width: $sm-large) {
+      font-size: 18px;
+      line-height: 18px;
+    }
+
+    span {
+      font-size: 15px;
+      font-weight: 400;
+
+      @media screen and (max-width: $sm-large) {
+        font-size: 11px;
+      }
+    }
+  }
+}
