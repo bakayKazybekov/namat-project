@@ -1,4 +1,4 @@
-export type sliderSettings = {
+export type SliderSettings = {
   dots: boolean,
   arrows: boolean,
   infinite: boolean,

@@ -6,10 +6,10 @@
   background-repeat: no-repeat;
   display: flex;
   justify-content: center;
-  padding: 82px 0;
+  padding: 40px 0 82px;
 
   @media screen and (max-width: $sm-large) {
-    padding: 0 16px 158px;
+    padding: 20px 16px 158px;
   }
 
   &-wrapper {

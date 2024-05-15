@@ -74,6 +74,10 @@
       display: flex;
       gap: 32px;
 
+      @media screen and (max-width: $lg-small) {
+        gap: 20px;
+      }
+
       @media screen and (max-width: $sm-large) {
         @include flex-column-gap(2px);
       }
@@ -92,6 +96,7 @@
       }
 
       &-number {
+        min-width: 40px;
         @include font-size(32px, 164%, 600);
         color: #DEDEDE;
       }

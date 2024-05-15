@@ -1,4 +1,5 @@
-import React from 'react'
+"use client"
+import React, { useState } from 'react'
 import Image from 'next/image';
 import { slide as Menu } from 'react-burger-menu'
 import LogoBanner from "../../../lib/components/LogoBanner";
@@ -14,23 +15,31 @@ import {
   HomePicture,
 } from "@/public";
 import './styles.scss'
+import Link from 'next/link';
 
 const HomeComponent = () => {
+  const [isOpen, setIsOpen] = useState<boolean>()
+
   return (
-    <header className="home">
+    <header className="home" id='home'>
       <div className="home-container">
         <div className="home__header">
           <LogoBanner />
           <Navigation />
           <div className="burger-menu-container">
             <Menu
+              onStateChange={(e) => setIsOpen(e.isOpen)}
+              isOpen={isOpen}
+              noOverlay
               width='100%'
               right
               className="burger-menu"
               customBurgerIcon={<Image src={BurgerIcon} alt='burger icon' />}
               customCrossIcon={<Image src={CloseIcon} alt='close icon' />}
             >
-              <Navigation className="burger-menu__navigation" />
+              <div onClick={() => setIsOpen(false)}>
+                <Navigation className="burger-menu__navigation" />
+              </div>
             </Menu>
           </div>
         </div>
@@ -40,10 +49,10 @@ const HomeComponent = () => {
               <span>Global distributor of leading global IT manufacturers</span>
               In our portfolio, we have over 50+ major global IT hardware and software manufacturers.
             </div>
-            <button className="home__content-button">
+            <Link href='#about-us' className="home__content-button">
               More about us
               <Image src={DownArrow} width={24} height={24} alt="down arrow" />
-            </button>
+            </Link>
           </div>
         </div>
       </div>

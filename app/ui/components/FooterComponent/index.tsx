@@ -6,7 +6,7 @@ import './styles.scss'
 
 const FooterComponent = () => {
   return (
-    <footer className="footer">
+    <footer className="footer" id='footer'>
       <div className="footer-content">
         <LogoBanner />
         <Navigation className="footer-navigation" />

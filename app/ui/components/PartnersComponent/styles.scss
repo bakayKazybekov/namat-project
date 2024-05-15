@@ -9,7 +9,8 @@
   display: flex;
   justify-content: space-between;
 
-  @media screen and (max-width: $lg-medium) {
+  @media screen and (max-width: $xl-small) {
+    align-items: center;
     @include flex-column-gap(28px);
   }
 
@@ -21,6 +22,15 @@
     max-width: 300px;
     @include flex-column-gap(8px);
     padding-top: 14px;
+
+    @media screen and (max-width: $xl-small) {
+      max-width: 400px;
+      text-align: center;
+    }
+    @media screen and (max-width: $sm-large) {
+      max-width: 400px;
+      text-align: start;
+    }
 
     &__title {
       @include font-size(42px, 132%, 800);
@@ -45,6 +55,11 @@
     justify-content: end;
     gap: 30px;
     z-index: 1;
+
+    @media screen and (max-width: $xl-small) {
+      justify-content: center;
+      gap: 15px;
+    }
 
     @media screen and (max-width: $sm-large) {
       gap: 8px;

@@ -1,26 +1,34 @@
 import React from 'react'
 import Image from 'next/image'
+import { motion } from 'framer-motion'
 import { partners } from '@/app/constants'
 import { SpecialCircle } from '@/public'
 import './styles.scss'
+import { animation } from '@/app/lib/animations'
 
 const PartnersComponent = () => {
   return (
-    <section className="partners">
+    <motion.section
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ amount: 0.2 }}
+      className="partners" 
+      id='partners'
+    >
       <div className="partners-info">
-        <div className="partners-info__title">50+ partners</div>
-        <div className="partners-info__text">We specialize in innovative solutions, adapting them to the needs of each market.</div>
+        <motion.div custom={1} variants={animation} className="partners-info__title">50+ partners</motion.div>
+        <motion.div custom={2} variants={animation} className="partners-info__text">We specialize in innovative solutions, adapting them to the needs of each market.</motion.div>
       </div>
       <div className="partners-icons">
         {partners.map((partner, index) => (
-          <div key={index} className="partners-icons__item">
+          <motion.div custom={(index + 1) / 4} variants={animation} key={index} className="partners-icons__item">
             <Image src={partner} width={100} height={36} alt='partner icon' />
-          </div>
+          </motion.div>
         ))}
       </div>
       <Image src={SpecialCircle} width={400} height={400} alt='special circle icon' className="left-special-circle" />
       <Image src={SpecialCircle} width={400} height={400} alt='special circle icon' className="right-special-circle" />
-    </section>
+    </motion.section>
   )
 }
 

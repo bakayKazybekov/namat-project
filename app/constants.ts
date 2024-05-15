@@ -1,6 +1,11 @@
 import { PartnerIcon, SliderPicture } from "@/public"
 
-export const links = ['About', 'Services', 'Partners', 'Contact']
+export const links = [
+  {href: '#about-us', title: 'About'},
+  {href: '#services', title: 'Services'},
+  {href: '#partners', title: 'Partners'},
+  {href: '#contacts', title: 'Contact'},
+]
 
 export const briefInfo = [
   {
@@ -51,4 +56,10 @@ export const slides = [
     guarantees: ['Improvement of business processes', 'Cost reduction'],
     picture: SliderPicture,
   },
+]
+
+export const detailedItemText = [
+  'We prioritize close collaboration with our suppliers. We become their trusted representatives, advisors, ready to solve any problems together or utilize new technologies and opportunities.',
+  'We combine expert technical and market knowledge with a progressive partner support program. By closely collaborating with our dealers, we aim to ensure their dynamic growth and development, achieving results together.',
+  'Working on projects worldwide, we tailor solutions to the specifics of each market.'
 ]

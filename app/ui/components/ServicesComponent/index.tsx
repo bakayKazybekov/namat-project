@@ -2,71 +2,46 @@
 import React, { FC, useState } from 'react'
 import Image from 'next/image';
 import Slider from 'react-slick';
-import { slides } from '@/app/constants';
-import { CheckCircle, SliderLeft, SliderRight } from '@/public';
+import { motion } from 'framer-motion';
+import { SliderLeft, SliderRight } from '@/public';
+import { SliderSettings } from '@/app/types';
+import CustomSlider from '@/app/lib/components/Slider';
 import './styles.scss'
-import { sliderSettings } from '@/app/types';
+import { animation } from '@/app/lib/animations';
 
 type Props = {
   next: () => void;
   prev: () => void;
-  settings: sliderSettings;
+  settings: SliderSettings;
   setSliderRef: (state: Slider) => void;
 }
 
 const ServicesComponent: FC<Props> = ({ next, prev, settings, setSliderRef }) => {
 
   return (
-    <section className="services">
+    <motion.section 
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ amount: 0.2 }}
+      className="services" 
+      id='services'
+    >
       <div className="services-header">
         <div className="services-title">
-          <span>Our Services</span>
-          <div className="services-subtitle">In our company, there are four main directions.</div>
+          <motion.span custom={1} variants={animation}>Our Services</motion.span>
+          <motion.div custom={2} variants={animation} className="services-subtitle">In our company, there are four main directions.</motion.div>
         </div>
-        <div className="services__slider-buttons">
+        <motion.div custom={1} variants={animation} className="services__slider-buttons">
           <button onClick={prev} className="services-button">
             <Image src={SliderLeft} width={48} height={48} alt='slider left button' />
           </button>
           <button onClick={next} className="services-button">
             <Image src={SliderRight} width={48} height={48} alt='slider right button' />
           </button>
-        </div>
+        </motion.div>
       </div>
-      <div className="services-slider">
-        <Slider
-          ref={slider => {
-            if (slider) {
-              setSliderRef(slider);
-            }
-          }}
-          {...settings}
-        >
-          {slides.map((slide) => (
-            <div key={slide.title} className="services-slide__wrapper">
-              <div className="services-slide" key={slide.title}>
-                <Image src={slide.picture} alt='slide picture' className="services-slide-picture" />
-                <div className="services-slide__info">
-                  <div className="services-slide__title">{slide.title}</div>
-                  <div className="services-slide__descriptions">
-                    {slide.descriptions.map((description) => (
-                      <div key={description} className="services-slide__description">{description}</div>
-                    ))}
-                    <div className="services-slide__guarantees">
-                      {slide.guarantees.map((guarantee) => (
-                        <div key={guarantee} className="services-slide__guarantee">
-                          <Image src={CheckCircle} width={18} height={18} alt='check circle' />
-                          <div className="guarantee-text">{guarantee}</div>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          ))}
-        </Slider>
-      </div>
-    </section>
+      <CustomSlider settings={settings} setSliderRef={setSliderRef} />
+    </motion.section>
   )
 }
 

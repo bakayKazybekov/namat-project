@@ -26,7 +26,7 @@ const Page: FC = () => {
 
   const [sliderRef, setSliderRef] = useState<Slider>();
   const next = () => {
-    sliderRef?.slickNext()
+    sliderRef?.slickNext();
   };
   const prev = () => {
     sliderRef?.slickPrev();
