@@ -26,8 +26,9 @@
   }
 
   &__wrapper {
-    width: 1110px;
-    @include flex-space-between;
+    width: 945px;
+    display: flex;
+    justify-content: space-between;
 
     @media screen and (max-width: $xl-medium) {
       width: 900px;
