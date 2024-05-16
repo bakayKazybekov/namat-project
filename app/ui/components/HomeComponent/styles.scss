@@ -8,13 +8,25 @@
   color: #FFF;
 
   &-container {
-    max-width: 77%;
+    width: 1110px;
     margin: 0 auto;
     padding: 32px 0 174px 0;
     @include flex-column-gap(96px);
 
+    @media screen and (max-width: $xl-medium) {
+      width: 900px;
+    }
+
+    @media screen and (max-width: $xl-small) {
+      width: 724px;
+    }
+
+    @media screen and (max-width: $lg-small) {
+      width: 620px;
+    }
+
     @media screen and (max-width: $sm-large) {
-      max-width: 100%;
+      width: 100%;
       padding: 20px 18px 270px;
       gap: 38px;
     }

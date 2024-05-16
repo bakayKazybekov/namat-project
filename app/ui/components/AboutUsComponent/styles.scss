@@ -1,10 +1,11 @@
 @import '../../../../styles/globals.scss';
 
 .about-us {
-  @include flex-space-between;
   padding: 214px 235px 280px 260px;
   color: #10152C;
   position: relative;
+  display: flex;
+  justify-content: center;
 
   @media screen and (max-width: $xl-medium) {
     padding: 150px;
@@ -22,7 +23,24 @@
 
   @media screen and (max-width: $sm-large) {
     padding: 236px 15px 55px;
-    @include flex-column-gap(120px);
+  }
+
+  &__wrapper {
+    width: 1110px;
+    @include flex-space-between;
+
+    @media screen and (max-width: $xl-medium) {
+      width: 900px;
+    }
+
+    @media screen and (max-width: $xl-small) {
+      width: 724px;
+    }
+
+    @media screen and (max-width: $sm-large) {
+      width: 100%;
+      @include flex-column-gap(120px);
+    }
   }
 
   .general-info {

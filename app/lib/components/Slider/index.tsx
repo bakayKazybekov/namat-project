@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import { slides } from '@/app/constants';
 import { SliderSettings } from '@/app/types';
 import { CheckCircle } from '@/public';
-import { animation } from '../../animations';
+import { verticalAnimation } from '../../animations';
 
 type Props = {
   settings: SliderSettings;
@@ -33,13 +33,13 @@ const CustomSlider: FC<Props> = ({ settings, setSliderRef }) => {
             <div className="services-slide" key={slide.title}>
               <Image src={slide.picture} alt='slide picture' className="services-slide-picture" />
               <div className="services-slide__info">
-                <motion.div custom={1} variants={animation} className="services-slide__title">{slide.title}</motion.div>
-                <motion.div custom={2} variants={animation} className="services-slide__descriptions">
+                <motion.div custom={1} variants={verticalAnimation} className="services-slide__title">{slide.title}</motion.div>
+                <motion.div custom={2} variants={verticalAnimation} className="services-slide__descriptions">
                   {slide.descriptions.map((description) => (
                     <div key={description} className="services-slide__description">{description}</div>
                   ))}
                 </motion.div>
-                <motion.div custom={3} variants={animation} className="services-slide__guarantees">
+                <motion.div custom={3} variants={verticalAnimation} className="services-slide__guarantees">
                   {slide.guarantees.map((guarantee) => (
                     <div key={guarantee} className="services-slide__guarantee">
                       <Image src={CheckCircle} width={18} height={18} alt='check circle' />

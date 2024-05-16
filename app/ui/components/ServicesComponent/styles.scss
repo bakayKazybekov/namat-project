@@ -4,6 +4,7 @@
   padding: 96px;
   display: flex;
   flex-direction: column;
+  align-items: center;
 
   @media screen and (max-width: $xl-small) {
     padding-left: 90px;
@@ -15,15 +16,29 @@
   }
 
   &-header {
+    width: 1110px;
     @include flex-space-between;
     padding: 0 164px 47px 95px;
+
+    @media screen and (max-width: $xl-medium) {
+      width: 900px;
+    }
+
+    @media screen and (max-width: $xl-small) {
+      width: 724px;
+    }
 
     @media screen and (max-width: $lg-medium) {
       padding: 50px;
       padding-top: 0;
     }
+    
+    @media screen and (max-width: $lg-small) {
+      width: 620px;
+    }
 
     @media screen and (max-width: $sm-large) {
+      width: 100%;
       padding: 0;
     }
   }

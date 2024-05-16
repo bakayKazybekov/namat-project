@@ -1,6 +1,4 @@
-import { easeIn } from "framer-motion";
-
-export const animation = {
+export const verticalAnimation = {
   hidden: {
     opacity: 0,
     y: 120,
@@ -8,6 +6,6 @@ export const animation = {
   visible: (custom: number) => ({
     opacity: 1,
     y: 0,
-    transition: {delay: custom * 0.2, duration: 0.3}
+    transition: {delay: custom * 0.15, duration: 0.3}
   })
 }

@@ -1,10 +1,10 @@
 import { PartnerIcon, SliderPicture } from "@/public"
 
 export const links = [
-  {href: '#about-us', title: 'About'},
-  {href: '#services', title: 'Services'},
-  {href: '#partners', title: 'Partners'},
-  {href: '#contacts', title: 'Contact'},
+  {href: 'about-us', title: 'About'},
+  {href: 'services', title: 'Services'},
+  {href: 'partners', title: 'Partners'},
+  {href: 'contacts', title: 'Contact'},
 ]
 
 export const briefInfo = [

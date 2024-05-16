@@ -15,7 +15,6 @@ import {
   HomePicture,
 } from "@/public";
 import './styles.scss'
-import Link from 'next/link';
 
 const HomeComponent = () => {
   const [isOpen, setIsOpen] = useState<boolean>()
@@ -49,10 +48,10 @@ const HomeComponent = () => {
               <span>Global distributor of leading global IT manufacturers</span>
               In our portfolio, we have over 50+ major global IT hardware and software manufacturers.
             </div>
-            <Link href='#about-us' className="home__content-button">
+            <a href='#about-us' className="home__content-button">
               More about us
               <Image src={DownArrow} width={24} height={24} alt="down arrow" />
-            </Link>
+            </a>
           </div>
         </div>
       </div>

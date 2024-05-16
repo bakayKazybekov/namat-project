@@ -7,15 +7,34 @@
   background-color: #3074DA;
   color: #FFF;
   display: flex;
-  justify-content: space-between;
-
-  @media screen and (max-width: $xl-small) {
-    align-items: center;
-    @include flex-column-gap(28px);
-  }
+  justify-content: center;
 
   @media screen and (max-width: $sm-large) {
     padding: 18px 15px 30px;
+  }
+
+  &-wrapper {
+    width: 1110px;
+    display: flex;
+    justify-content: space-between;
+
+    @media screen and (max-width: $xl-medium) {
+      width: 900px;
+    }
+
+    @media screen and (max-width: $xl-small) {
+      width: 724px;
+      align-items: center;
+      @include flex-column-gap(28px);
+    }
+
+    @media screen and (max-width: $lg-small) {
+      width: 620px;
+    }
+
+    @media screen and (max-width: $sm-large) {
+      width: 100%;
+    }
   }
 
   &-info {

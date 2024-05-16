@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 import { MessageIcon, PhoneIcon, TriangleWaves } from '@/public'
 import SocialLinks from '@/app/lib/components/SocialLinks'
 import './styles.scss'
-import { animation } from '@/app/lib/animations'
+import { verticalAnimation } from '@/app/lib/animations'
 
 const ContactsComponent = () => {
   return (
@@ -16,9 +16,9 @@ const ContactsComponent = () => {
       id='contacts'
     >
       <div className="contacts-wrapper">
-        <motion.div custom={1} variants={animation} className="contacts-title">Contact us</motion.div>
+        <motion.div custom={1} variants={verticalAnimation} className="contacts-title">Contact us</motion.div>
         <div className="contacts-content">
-          <motion.div custom={2} variants={animation} className="contacts-info">
+          <motion.div custom={2} variants={verticalAnimation} className="contacts-info">
             <div className="contacts-communications">
               <div className="contacts-communication">
                 <Image src={PhoneIcon} width={18} height={18} alt='phone icon' />
@@ -32,7 +32,7 @@ const ContactsComponent = () => {
             <div className="contacts-text">IFZA Property FZCO, Dubai Silicon Oasis, DDP, Building A1, Dubai, United Arab Emirates</div>
             <SocialLinks />
           </motion.div>
-          <motion.form custom={2} variants={animation} className="contacts-form">
+          <motion.form custom={2} variants={verticalAnimation} className="contacts-form">
             <div className="contacts-fields">
               <input className="contacts-input" placeholder="Your name" />
               <input className="contacts-input" placeholder="Email" />
